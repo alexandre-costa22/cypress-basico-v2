@@ -28,7 +28,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
   it('campo telefone continua vazio quando preenchido com valor não-numérico', function() {
     cy.get('#phone')
       .type('testestestest')
-      .should('have.value', '')
+      .should('have.value', 'ABC')
   })
 
   it('exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', function(){
